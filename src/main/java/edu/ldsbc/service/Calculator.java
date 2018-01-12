@@ -23,4 +23,5 @@ public class Calculator {
     public int divide (int base, int dividedBy){
         return  base/dividedBy;
     }
+
 }
