@@ -4,5 +4,6 @@ public interface AnimalAudio {
 
     String makeSound();
     String sayMyName();
+    String printOwner();
 
 }

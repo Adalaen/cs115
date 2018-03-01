@@ -22,7 +22,11 @@ public class Duck extends Animal implements AnimalAudio {
     }
 
     public String sayMyName() {
-        return ("My Name is" + super.getMyName());
+        return ("My Name is " + super.getMyName());
+    }
+
+    public String printOwner() {
+        return ("My owner is: "+getOwner().getFirstName()+" "+getOwner().getLastName());
     }
 
 }

@@ -6,14 +6,15 @@ import java.util.List;
 public class Main {
 
     public static void main(String[] args) {
-        List<AnimalAudio> animalList = new ArrayList<AnimalAudio>();
+        List<AnimalAudio> animalList = new ArrayList<>();
 
+        Owner craig = new Owner("Craig", "Smith", "000", "guyAt@gmail");
         Owner bob = new Owner("Bob", "Smith", "000", "guyAt@gmail");
         Owner jon = new Owner("Jon", "Smith", "010", "guy22At@gmail");
         Owner Jil = new Owner("Jil", "Smith", "001", "g22At@gmail");
         Owner bob2 = new Owner("Bob", "Walter", "510", "gAt@gmail");
 
-        animalList.add(new Cat("Cat", bob, Gender.Female, Size.Small));
+        animalList.add(new Cat("Cat", craig, Gender.Female, Size.Small));
         animalList.add(new Duck("Duck", jon, Gender.Female, true));
         animalList.add(new Dog("Dog", bob2, Gender.Female, false));
 
@@ -30,8 +31,10 @@ public class Main {
         animalList.add(new Cat("BigC", Jil, Gender.Male, Size.Small));
 
         for (AnimalAudio aa: animalList){
-            aa.sayMyName();
-            aa.makeSound();
+            System.out.println(aa.sayMyName());
+            System.out.println(aa.makeSound());
+            System.out.println(aa.printOwner());
+            System.out.println();
         }
     }
 
