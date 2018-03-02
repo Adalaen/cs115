@@ -4,7 +4,7 @@ import java.util.ArrayList;
 
 public class Courses {
 
-    private ArrayList<CourseOffering> courseList = new ArrayList<CourseOffering>();
+    private ArrayList<CourseOffering> courseList;
 
     public Courses(ArrayList<CourseOffering> courseList) {
         this.courseList = courseList;
