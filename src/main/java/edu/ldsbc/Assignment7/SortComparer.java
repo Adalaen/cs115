@@ -1,25 +1,31 @@
 package edu.ldsbc.Assignment7;
 
-import java.util.ArrayList;
+import java.util.*;
 
 public class SortComparer {
 
-    private ArrayList<Integer> numbbers;
-    private ArrayList<Sorter> algorithms;
+    private List<Integer> numbbers;
+    private List<Sorter> algorithms = new ArrayList<>();
 
     public void compareSorters(int sizeList){
+        createRandomList(sizeList);
+        SelectionSort selectionSort = new SelectionSort("ListSelectionSort");
+        selectionSort.sort(numbbers);
+    }
+
+    void createRandomList(int size){
+        this.numbbers =  new ArrayList<>(size);
+        for (int i = 0; i>size; i++){
+            Random rand = new Random();
+            numbbers.add(new Integer(rand.nextInt(size)));
+        }
+    }
+
+    void createAcsendingList(int size){
 
     }
 
-    public void createRandomList(int size){
-
-    }
-
-    public void createAcsendingList(int size){
-
-    }
-
-    public void createDecsendingList(int size){
+    void createDecsendingList(int size){
 
     }
 

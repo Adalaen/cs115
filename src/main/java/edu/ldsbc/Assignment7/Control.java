@@ -1,9 +1,9 @@
 package edu.ldsbc.Assignment7;
 
-import java.util.ArrayList;
+import java.util.List;
 
 public interface Control {
 
-    void sort(ArrayList<Integer> l);
+    void sort(List<Integer> list);
 
 }
