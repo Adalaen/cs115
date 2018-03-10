@@ -12,32 +12,32 @@ public class SelectionSort extends Sorter {
     @Override
     public void sort(List<Integer> list) {
         ArrayList<Integer> sortedList = new ArrayList<>();
-
-        for (int i = 0; i>list.size();i++){
-            System.out.println(list.get(i));
-        }
-
-        for (int i = 0; i>list.size();i++){
+        int runTime = list.size();
+        for (int i = 0; i<runTime;i++){
             int item = smallestInt(list);
             sortedList.add(list.get(item));
             list.remove(item);
         }
-
-        for (int i = 0; i>sortedList.size();i++){
-            System.out.println(sortedList.get(i));
-        }
     }
 
-    private int smallestInt(List<Integer> list){
-        int smallestInteger = 0;
-        for (int i = 0; i>list.size();i++){
+    int smallestInt(List<Integer> list){
+        int smallestInteger = 100;
+        int smallestIntegerP = 0;
+        for (int i = 0; i<list.size();i++){
             if (list.get(i) < smallestInteger){
-                smallestInteger = i;
+                smallestInteger = list.get(i);
+                smallestIntegerP = i;
             }
         }
-        return smallestInteger;
+        return smallestIntegerP;
     }
 
+    void printList(List<Integer> list){
+        for (int i = 0; i<list.size();i++){
+            System.out.println(list.get(i));
+        }
+        System.out.println("-----");
+    }
 /*
     private int biggestInt(ArrayList<Integer> list){
         int biggestInteger = 0;

@@ -26,11 +26,39 @@ public class CourseOffering {
     }
 
     public String toString(){
-        return "";
+        return "Error";
     }
 
     public String getDays(){
-        return "";
+        String theDays = "" + this.days;
+        return theDays;
     }
 
+    public int getCourseNumber() {
+        return courseNumber;
+    }
+
+    public String getCourseName() {
+        return courseName;
+    }
+
+    public String getInstructor() {
+        return instructor;
+    }
+
+    public char[] getSection() {
+        return section;
+    }
+
+    public String getRoom() {
+        return room;
+    }
+
+    public LocalTime getTime() {
+        return time;
+    }
+
+    public int getCapacity() {
+        return capacity;
+    }
 }
